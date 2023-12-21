@@ -1,0 +1,66 @@
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --icon-size: 22px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: 'Consolas', Times, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/*
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+*/
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border: solid 5px var(--primary-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--primary-color);
+}

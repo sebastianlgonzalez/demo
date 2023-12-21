@@ -1,0 +1,42 @@
+#wrapper {
+  transition: opacity 150ms ease;
+}
+
+#wrapper[data-fade="in"] {
+  opacity: 1;
+}
+
+#wrapper[data-fade="out"] {
+  opacity: 0;
+}
+
+
+#wrapper > section > p {
+  margin-top: 1em;
+}
+
+#wrapper > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#wrapper > p {
+  text-align: center;
+  margin: 1em;
+}
+
+#wrapper > div > a {
+  border: 3px solid white;
+  color: white;
+  font-family: 'Consolas', Times, serif;
+  font-size: 1em;
+  padding: 8px;
+  border-radius: .5em;
+  transition: 0.3s;
+}
+
+#wrapper > div > a:hover {
+  border: 3px solid white;
+  background-color: white;
+  color: black;
+}

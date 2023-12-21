@@ -1,0 +1,45 @@
+#wrapper {
+  margin: 0 32px 0;
+}
+
+#wrapper > ul {
+  margin-top: 8px;
+  list-style-type: none;
+}
+
+#wrapper > ul > li{
+  width: max-content;
+  margin: 4px 0;
+}
+
+.link {
+  transition: .3s;
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  width: .5ch;
+  transform: translateX(-4.5ch);
+  transition: 0.3s;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+}
+
+.link[data-toggled="true"] {
+  margin-left: -2ch;
+  background-color: white;
+  color: black;
+  margin-right: 2ch;
+}
+
+.link[data-toggled="true"]::before {
+  background-color: rgb(255, 255, 255);
+}
