@@ -2,43 +2,33 @@ import VoiceAssistant from '@/components/Projects/VoiceAssistant'
 import EcoliMachineLearning from '@/components/Projects/EcoliMachineLearning'
 import Link from 'next/link';
 import styles from './sidebar.module.css'
-import { useEffect, useRef, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 
 const projectLinks = {
   voice_assistant: 'https://github.com/sebastianlgonzalez/A.I.-Voice-Assistant',
   ecoli_machine_learning: 'https://github.com/sebastianlgonzalez/Ecoli-Machine-Learning',
 };
 
-
-
-const Sidebar = ({ query }) => {
-  const [fade, setFade] = useState(false)
+const Sidebar = ({query}) => {
+  const [fade, setFade] = useState("in")
   const [content, setContent] = useState()
-
   useEffect(() => {
     if (!!query) {
-      if (fade == "in") {
-        setFade("out")
-        setTimeout(() => {
-          setContent(query)
-          setFade("in")
-        }, 150)
-      } else {
-        setContent(query)
-        setFade("in")
-      }
-    } else {
-      setFade("out")
+      setFade("out");
       setTimeout(() => {
-        setContent(query)
-      }, 150)
+        setContent(query);
+        setFade("in");
+      }, 150);
+    } else {
+      setFade("out");
+      setTimeout(() => {
+        setContent(query);
+      }, 150);
     }
-
-  },[query])
+  }, [query]);
 
   return (
-    <div data-fade={fade} id={styles.wrapper}>
+    <div data-content={content} data-fade={fade} id={styles.wrapper}>
       {content ? (
       <>
         <section>
@@ -54,6 +44,5 @@ const Sidebar = ({ query }) => {
     </div>
   )
 }
-
 
 export default Sidebar;
