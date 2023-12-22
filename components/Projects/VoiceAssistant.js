@@ -15,6 +15,5 @@ export default function VoiceAssistant() {
         that is accessible with the Microsoft Edge browser effectively.
       </p>
     </>
-
   )
 }

@@ -18,7 +18,7 @@ export default function Projects() {
             <button 
               data-toggled={query == "voice_assistant" ? true : false}
               className={styles.link}
-              onClick={() => {router.replace(query == "voice_assistant" ? "/" : "/?project=voice_assistant", { scroll: false })}}
+              onClick={() => {router.replace(query == "voice_assistant" ? "/" : "/?project=voice_assistant", { scroll: false, shallow: true })}}
             >
               A.I. Voice Assistant
             </button>
@@ -27,7 +27,7 @@ export default function Projects() {
             <button 
               data-toggled={query == "ecoli_machine_learning" ? true : false}
               className={styles.link}
-              onClick={() => {router.replace(query == "ecoli_machine_learning" ? "/" : "/?project=ecoli_machine_learning", { scroll: false })}}
+              onClick={() => {router.replace(query == "ecoli_machine_learning" ? "/" : "/?project=ecoli_machine_learning", { scroll: false, shallow: true })}}
             >
               Ecoli Sample Analysis with Machine Learning
             </button>
