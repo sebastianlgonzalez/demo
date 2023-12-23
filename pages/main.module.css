@@ -45,7 +45,8 @@
   justify-content: center;
   width: 50%;
   height: 100%;
-  margin-left: 32px;
+  padding-left: 32px;
+  box-sizing: border-box;
 }
 
 #projects {

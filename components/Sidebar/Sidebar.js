@@ -34,9 +34,8 @@ const Sidebar = ({query}) => {
         <section>
           {content == 'voice_assistant' ? <VoiceAssistant /> : content === 'ecoli_machine_learning' ? <EcoliMachineLearning /> : null}
         </section>
-        <p>More Info: {projectLinks[content] && <a href={projectLinks[content]} target="_blank" rel="noopener noreferrer">{projectLinks[content]}</a>}</p>
+        <p>More Info: {projectLinks[content]}</p>
         <div>
-          <Link href={content == 'voice_assistant' ? 'https://github.com/sebastianlgonzalez/A.I._Voice_Assistant' : content === 'ecoli_machine_learning' ? 'https://github.com/sebastianlgonzalez/Ecoli_Machine_Learning' : null} scroll={false}>Open in this tab.</Link>
           <Link href={content == 'voice_assistant' ? 'https://github.com/sebastianlgonzalez/A.I._Voice_Assistant' : content === 'ecoli_machine_learning' ? 'https://github.com/sebastianlgonzalez/Ecoli_Machine_Learning' : null} scroll={false} target="_blank" rel="noopener noreferrer">Open in new tab.</Link>
         </div>
       </>
@@ -46,3 +45,6 @@ const Sidebar = ({query}) => {
 }
 
 export default Sidebar;
+/* 
+<Link href={content == 'voice_assistant' ? 'https://github.com/sebastianlgonzalez/A.I._Voice_Assistant' : content === 'ecoli_machine_learning' ? 'https://github.com/sebastianlgonzalez/Ecoli_Machine_Learning' : null} scroll={false}>Open in this tab.</Link>
+*/

@@ -16,13 +16,11 @@
 }
 
 #wrapper > div {
-  display: flex;
-  justify-content: space-evenly;
+  padding-top: 1em;
 }
 
 #wrapper > p {
-  text-align: center;
-  margin: 1em;
+  margin: 1em 0;
 }
 
 #wrapper > div > a {
