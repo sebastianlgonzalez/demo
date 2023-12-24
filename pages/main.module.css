@@ -1,60 +1,26 @@
-#header {
-  display: flex;
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  justify-content: flex-end;
-  padding-top: 10px;
-}
-
-.button {
-  margin-right: 15px;
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-}
-
-.button:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgb(255, 255, 255);
-  width: 100%;
-  height: 3px;
-  transition: transform 0.3s ease;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-.button:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-#header > button{
-  margin-right: 15px;
-}
-
-#landing {
-  display: flex;
-  height: calc(100vh - var(--icon-size) - 8px);
-  width: 100%;
-}
-
-#info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  padding-left: 32px;
-  box-sizing: border-box;
-}
-
-#projects {
-  display: flex;
   height: 100svh;
-  width: 100%;
 }
 
-#projects > div {
-  margin-top: 32px;
+#wrapper > a {
+  border: 3px solid var(--secondary-color);
+  padding: 8px;
+  border-radius: 1em;
+  transition: 0.3s;
+  width: 50%;
+  height: 30%;
+  line-height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+#wrapper > a:hover {
+  border: 3px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }

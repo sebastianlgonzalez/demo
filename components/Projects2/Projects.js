@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useSearchParams, usePathname } from 'next/navigation'
 import styles from './projects.module.css'
-import Sidebar from '@/components/Sidebar/Sidebar'
+import Sidebar2 from '@/components/Sidebar2/Sidebar'
 
 export default function Projects() {
   const query = useSearchParams().get('project')
@@ -22,7 +22,7 @@ export default function Projects() {
               A.I. Voice Assistant
             </Link>
           </li>
-          <li>
+          <li style={{ marginTop: query == "voice_assistant" ? "15rem" : "1rem" }}>
             <Link
               data-toggled={query == "ecoli_machine_learning" ? true : false}
               className={styles.link}
@@ -34,26 +34,7 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <Sidebar query={query} />
+      <Sidebar2 query={query} />
     </>
   )
 }
-
-/*
-
-            <button 
-              data-toggled={query == "voice_assistant" ? true : false}
-              className={styles.link}
-              onClick={() => {router.replace(query == "voice_assistant" ? "/" : "/?project=voice_assistant", { scroll: false, shallow: true })}}
-            >
-              A.I. Voice Assistant
-            </button>
-            <button 
-              data-toggled={query == "ecoli_machine_learning" ? true : false}
-              className={styles.link}
-              onClick={() => {router.replace(query == "ecoli_machine_learning" ? "/" : "/?project=ecoli_machine_learning", { scroll: false, shallow: true })}}
-            >
-              Ecoli Sample Analysis with Machine Learning
-            </button>
-
-*/
